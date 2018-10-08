@@ -13,7 +13,11 @@ export class HomePage {
   }
 
   checkVersion(){
-    console.log("uodate check")
+    console.log("update check");
+    Pro.deploy.getCurrentVersion().then((versionInfo) => {
+      console.log(versionInfo);
+    })
+
     this.performManualUpdate();
   }
 
@@ -29,6 +33,7 @@ export class HomePage {
      */
 
     try {
+
       const update = await Pro.deploy.checkForUpdate();
       console.log("update available",update);
       if (update.available){
