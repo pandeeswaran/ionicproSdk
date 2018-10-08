@@ -7,12 +7,13 @@ import {Pro} from "@ionic/pro";
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  downloadProgress: any;
   constructor(public navCtrl: NavController) {
 
   }
 
   checkVersion(){
+    console.log("uodate check")
     this.performManualUpdate();
   }
 
@@ -29,7 +30,7 @@ export class HomePage {
 
     try {
       const update = await Pro.deploy.checkForUpdate();
-
+      console.log("update available",update);
       if (update.available){
         this.downloadProgress = 0;
 
@@ -42,7 +43,7 @@ export class HomePage {
     } catch (err) {
       // We encountered an error.
       // Here's how we would log it to Ionic Pro Monitoring while also catching:
-
+       console.log(err);
       // Pro.monitoring.exception(err);
     }
 
