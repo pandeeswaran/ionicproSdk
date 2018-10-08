@@ -1,0 +1,8 @@
+{
+  "name": "vendormatepro",
+  "app_id": "256cd56b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
