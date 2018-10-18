@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.vendorpro.sample" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>vendormatepro</name>
+    <name>vendormateMock</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
@@ -81,16 +81,15 @@
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <engine name="android" spec="6.3.0" />
-    <engine name="ios" spec="4.5.5" />
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
-    <plugin name="cordova-plugin-ionic" spec="^5.2.5">
+    <plugin name="cordova-plugin-ionic" spec="^5.0.0">
         <variable name="APP_ID" value="7bb4d950" />
         <variable name="CHANNEL_NAME" value="master" />
         <variable name="UPDATE_METHOD" value="background" />
         <variable name="MAX_STORE" value="10" />
-        <variable name="WARN_DEBUG" value="true" />
         <variable name="UPDATE_API" value="https://api.ionicjs.com" />
         <variable name="MIN_BACKGROUND_DURATION" value="30" />
     </plugin>
+    <engine name="ios" spec="^4.5.5" />
+    <engine name="android" spec="^6.3.0" />
 </widget>
