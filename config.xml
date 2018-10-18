@@ -80,10 +80,9 @@
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
-    <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <plugin name="cordova-plugin-ionic" spec="^5.0.0">
-        <variable name="APP_ID" value="256cd56b" />
+    <plugin name="cordova-plugin-ionic" spec="^5.2.5">
+        <variable name="APP_ID" value="83f97af8" />
         <variable name="CHANNEL_NAME" value="master" />
         <variable name="UPDATE_METHOD" value="background" />
         <variable name="MAX_STORE" value="10" />
@@ -91,5 +90,7 @@
         <variable name="UPDATE_API" value="https://api.ionicjs.com" />
         <variable name="MIN_BACKGROUND_DURATION" value="30" />
     </plugin>
+    <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
+    <engine name="android" spec="6.3.0" />
     <engine name="ios" spec="4.5.5" />
 </widget>

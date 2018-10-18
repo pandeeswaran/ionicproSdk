@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, AlertController} from 'ionic-angular';
 import {Pro} from "@ionic/pro";
 
 @Component({
@@ -8,11 +8,15 @@ import {Pro} from "@ionic/pro";
 })
 export class HomePage {
   downloadProgress: any;
-  constructor(public navCtrl: NavController) {
+
+  private email_id: any;
+  private password_id: any;
+
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
 
   }
 
-  checkVersion(){
+  checkVersion() {
     console.log("update check");
     Pro.deploy.getCurrentVersion().then((versionInfo) => {
       console.log(versionInfo);
@@ -35,8 +39,8 @@ export class HomePage {
     try {
 
       const update = await Pro.deploy.checkForUpdate();
-      console.log("update available",update);
-      if (update.available){
+      console.log("update available", update);
+      if (update.available) {
         this.downloadProgress = 0;
 
         await Pro.deploy.downloadUpdate((progress) => {
@@ -48,9 +52,18 @@ export class HomePage {
     } catch (err) {
       // We encountered an error.
       // Here's how we would log it to Ionic Pro Monitoring while also catching:
-       console.log(err);
+      console.log(err);
       // Pro.monitoring.exception(err);
     }
 
+  }
+
+  private submitAction() {
+    let alert = this.alertCtrl.create({
+      title: 'User input',
+      subTitle: this.email_id + "/" + this.password_id,
+      buttons: ['Dismiss']
+    });
+    alert.present();
   }
 }

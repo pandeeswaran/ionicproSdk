@@ -7,6 +7,18 @@
 </ion-header>
 
 <ion-content padding>
-  I love my baby girl
-  <button ion-button small (click)="checkVersion()">Click</button>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" type="email" floating>Email</ion-label>
+      <ion-input [(ngModel)]="email_id"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" type="password" floating>Password</ion-label>
+      <ion-input [(ngModel)]="password_id"></ion-input>
+    </ion-item>
+    <button ion-button small (click)="submitAction()">Submit</button>
+    <button ion-button small (click)="checkVersion()">check update</button>
+  </ion-list>
 </ion-content>

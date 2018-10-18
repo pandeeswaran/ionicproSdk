@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import {Pro} from "@ionic/pro";
 
 
-Pro.init('256cd56b', {
+Pro.init('83f97af8', {
   appVersion: '0.0.1'
 })
 
