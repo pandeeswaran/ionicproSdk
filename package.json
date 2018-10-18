@@ -57,7 +57,7 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-ionic": {
-        "APP_ID": "83f97af8",
+        "APP_ID": "7bb4d950",
         "CHANNEL_NAME": "master",
         "UPDATE_METHOD": "background",
         "MAX_STORE": "10",
