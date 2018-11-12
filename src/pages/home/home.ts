@@ -20,7 +20,7 @@ export class HomePage {
     console.log("update check");
     Pro.deploy.getCurrentVersion().then((versionInfo) => {
       console.log(versionInfo);
-    })
+    });
 
     this.performManualUpdate();
   }

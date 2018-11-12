@@ -18,6 +18,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      //this.performManualUpdate();
     });
   }
 
@@ -35,7 +36,7 @@ export class MyApp {
     try {
 
       const update = await Pro.deploy.checkForUpdate();
-      console.log("update available", update);
+      //console.log("update available", update);
       if (update.available) {
         this.downloadProgress = 0;
 
@@ -48,7 +49,7 @@ export class MyApp {
     } catch (err) {
       // We encountered an error.
       // Here's how we would log it to Ionic Pro Monitoring while also catching:
-      console.log(err);
+     // console.log(err);
       // Pro.monitoring.exception(err);
     }
 
